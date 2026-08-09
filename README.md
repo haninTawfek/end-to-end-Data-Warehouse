@@ -32,13 +32,15 @@ The primary goal of this project is to transform raw, unstructured data from mul
 
 The solution follows the industry-standard **Medallion Architecture**, ensuring clear separation of concerns, end-to-end data lineage, easy maintenance, and robust data quality validation at every stage.
 
----
-mermaid
-graph TD
-    A[Raw Data Sources] --> B[Bronze Layer: Raw Ingestion]
-    B --> C[Silver Layer: Cleansed & Validated]
-    C --> D[Gold Layer: Star Schema & Aggregations]
-    D --> E[Power BI Interactive Dashboard]
+
+> **Data Pipeline Flow:**
+> `Raw Data Sources` ➔ `Bronze Layer` ➔ `Silver Layer` ➔ `Gold Layer` ➔ `Power BI Dashboard`
+
+- 🟤 **Bronze Layer:** Raw Data Ingestion & Snapshot Preservation
+- ⚪ **Silver Layer:** Data Cleaning, Validation & Deduplication
+- 🟡 **Gold Layer:** Star Schema Modeling (Fact & Dimensions) & Aggregations
+- 📊 **Power BI:** Interactive Reports & DAX Analytics
+  
 ---
 
 ## 🔄 Medallion Architecture Layers
@@ -81,18 +83,18 @@ The Gold Layer serves as the direct engine powering a multi-page, highly interac
 
 ### 🖼️ Dashboard Pages Overview
 
-1. **Overview Page:** Executive summary displaying high-level KPIs (`Total Customers`, `Total Merchants`, `Total Transactions`, `Total Sales`), merchant activity trends, and quarterly customer performance.
-2. <img width="1323" height="745" alt="image" src="https://github.com/user-attachments/assets/80351855-8409-4bf4-9859-7298e8de3e4a" />
+**Overview Page:** Executive summary displaying high-level KPIs (`Total Customers`, `Total Merchants`, `Total Transactions`, `Total Sales`), merchant activity trends, and quarterly customer performance.
+<img width="1323" height="745" alt="image" src="https://github.com/user-attachments/assets/80351855-8409-4bf4-9859-7298e8de3e4a" />
 
-3. **Customers Page:** In-depth customer demographics analysis, geographical sales mapping (Azure Maps), distribution by `loyalty_tier`, `job`, and age metrics.
-4. <img width="1317" height="737" alt="image" src="https://github.com/user-attachments/assets/291ac2d5-1c11-424d-a384-361a818bf9c9" />
+**Customers Page:** In-depth customer demographics analysis, geographical sales mapping (Azure Maps), distribution by `loyalty_tier`, `job`, and age metrics.
+<img width="1317" height="737" alt="image" src="https://github.com/user-attachments/assets/291ac2d5-1c11-424d-a384-361a818bf9c9" />
 
 
-5. **Transactions Page:** Transactional behavioral analysis across payment channels (`digital_wallet`, `debit_card`, `credit_card`), Category-wise breakdown, and fraud rate monitoring.
-6. <img width="1325" height="737" alt="image" src="https://github.com/user-attachments/assets/cd82affd-cdb8-4b9c-aab7-c6d0f7638354" />
+**Transactions Page:** Transactional behavioral analysis across payment channels (`digital_wallet`, `debit_card`, `credit_card`), Category-wise breakdown, and fraud rate monitoring.
+<img width="1325" height="737" alt="image" src="https://github.com/user-attachments/assets/cd82affd-cdb8-4b9c-aab7-c6d0f7638354" />
 
-7. **Merchants Page:** Merchant tenure analysis, fraud transaction distribution by device type, and merchant breakdown by `dominant_category`.
-8. <img width="1317" height="738" alt="image" src="https://github.com/user-attachments/assets/b61f9aa0-178e-4e2f-9524-3f7d6cb18ed4" />
+**Merchants Page:** Merchant tenure analysis, fraud transaction distribution by device type, and merchant breakdown by `dominant_category`.
+<img width="1317" height="738" alt="image" src="https://github.com/user-attachments/assets/b61f9aa0-178e-4e2f-9524-3f7d6cb18ed4" />
 
 
 ---
@@ -104,6 +106,8 @@ The Gold Layer serves as the direct engine powering a multi-page, highly interac
 - **Dynamic Slicers & Cross-Filtering:** Comprehensive slicers for timeframes (`month_name`), categories, and merchant tenure across all report views.
 
 - -------
+## Tech Stack Table
+
 <table>
   <thead>
     <tr>
