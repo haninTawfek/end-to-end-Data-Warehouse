@@ -104,10 +104,6 @@ The Gold Layer serves as the direct engine powering a multi-page, highly interac
 - **Dynamic Slicers & Cross-Filtering:** Comprehensive slicers for timeframes (`month_name`), categories, and merchant tenure across all report views.
 
 - -------
-### 2️⃣ بديل جدول التقنيات (Tech Stack Table)
-جدول هجين بلغة HTML يضمن عدم انهيار الأعمدة أو تداخل الكلمات مهما كانت لغة الواجهة:
-
-```html
 <table>
   <thead>
     <tr>
