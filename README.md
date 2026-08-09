@@ -33,7 +33,7 @@ The primary goal of this project is to transform raw, unstructured data from mul
 The solution follows the industry-standard **Medallion Architecture**, ensuring clear separation of concerns, end-to-end data lineage, easy maintenance, and robust data quality validation at every stage.
 
 ---
-```mermaid
+mermaid
 graph TD
     A[Raw Data Sources] --> B[Bronze Layer: Raw Ingestion]
     B --> C[Silver Layer: Cleansed & Validated]
