@@ -100,7 +100,8 @@ The Gold Layer serves as the direct engine powering a multi-page, highly interac
 2. <img width="1323" height="745" alt="image" src="https://github.com/user-attachments/assets/80351855-8409-4bf4-9859-7298e8de3e4a" />
 
 3. **Customers Page:** In-depth customer demographics analysis, geographical sales mapping (Azure Maps), distribution by `loyalty_tier`, `job`, and age metrics.
-4. <img width="1322" height="737" alt="image" src="https://github.com/user-attachments/assets/c2be3b72-b801-4192-83b0-a16539d3a957" />
+4. <img width="1317" height="737" alt="image" src="https://github.com/user-attachments/assets/291ac2d5-1c11-424d-a384-361a818bf9c9" />
+
 
 5. **Transactions Page:** Transactional behavioral analysis across payment channels (`digital_wallet`, `debit_card`, `credit_card`), Category-wise breakdown, and fraud rate monitoring.
 6. <img width="1325" height="737" alt="image" src="https://github.com/user-attachments/assets/cd82affd-cdb8-4b9c-aab7-c6d0f7638354" />
@@ -116,7 +117,7 @@ The Gold Layer serves as the direct engine powering a multi-page, highly interac
 - **Drill-Through Capabilities:** Enables users to right-click on high-level visuals (e.g., specific customer tiers or merchant categories) and navigate directly to dedicated granular detail pages (such as Customer Detail Table or Merchant Audit Page) with context automatically filtered.
 - **Custom Report Page Tooltips:** Hovering over dynamic dimensions (such as `dominant_category`) triggers custom tooltip pages displaying supplementary sub-metrics and mini-visuals without cluttering the main screen.
 - **Dynamic Slicers & Cross-Filtering:** Comprehensive slicers for timeframes (`month_name`), categories, and merchant tenure across all report views.
-- **DAX-Powered KPIs:** Custom measures driving conditional visuals, Time Intelligence (YoY, MoM), and Fraud Rate calculations.
+
 - -------
 🛠️ Tech Stack
 Category                Technology /Tools/UsedData
@@ -129,19 +130,19 @@ Version Control         Git & GitHub
 
 -----------------------------------------
 🚀 How to Run
-Database Setup:
+## Database Setup:
 
-Run the SQL scripts for the Bronze layer to load the raw source datasets.
+1. Run the SQL scripts for the Bronze layer to load the raw source datasets.
 
-Execute the Silver layer procedures to execute data cleaning and transformations.
+2. Execute the Silver layer procedures to execute data cleaning and transformations.
 
-Run the Gold layer scripts to build the Fact and Dimension tables.
+3. Run the Gold layer scripts to build the Fact and Dimension tables.
 
-Power BI Dashboard Configuration:
+## Power BI Dashboard Configuration:
 
-Open Dashboard.pbix in Power BI Desktop.
+1. Open Dashboard.pbix in Power BI Desktop.
 
-Update the Data Source Settings to point to your Gold Layer database.
+2. Update the Data Source Settings to point to your Gold Layer database.
 
-Click Refresh to load the processed data into the visuals.
+3. Click Refresh to load the processed data into the visuals.
 
