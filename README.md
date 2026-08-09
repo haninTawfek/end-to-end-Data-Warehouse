@@ -31,26 +31,29 @@ The primary goal of this project is to transform raw, unstructured data from mul
 ## 🏗️ Data Warehouse Architecture
 
 The solution follows the industry-standard **Medallion Architecture**, ensuring clear separation of concerns, end-to-end data lineage, easy maintenance, and robust data quality validation at every stage.
+
 ---
-[ Raw Data Sources ]
-│
-▼
-┌───────────────────┐
-│   Bronze Layer    │  ───► (Raw Data Ingestion)
-└─────────┬─────────┘
-│
-▼
-┌───────────────────┐
-│   Silver Layer    │  ───► (Data Cleaning & Validation)
-└─────────┬─────────┘
-│
-▼
-┌───────────────────┐
-│    Gold Layer     │  ───► (Star Schema & Business Aggregations)
-└─────────┬─────────┘
-│
-▼
-[ Power BI Dashboard ]
+
+   [ Raw Data Sources ]
+          │
+          ▼
+ ┌───────────────────┐
+ │   Bronze Layer    │  ───► (Raw Data Ingestion)
+ └─────────┬─────────┘
+           │
+           ▼
+ ┌───────────────────┐
+ │   Silver Layer    │  ───► (Data Cleaning & Validation)
+ └─────────┬─────────┘
+           │
+           ▼
+ ┌───────────────────┐
+ │    Gold Layer     │  ───► (Star Schema & Business Aggregations)
+ └─────────┬─────────┘
+           │
+           ▼
+ [ Power BI Dashboard ]
+ 
 ---
 
 ## 🔄 Medallion Architecture Layers
