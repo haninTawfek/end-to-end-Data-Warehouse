@@ -86,14 +86,16 @@ The solution follows the industry-standard **Medallion Architecture**, ensuring 
 ## 📐 Data Modeling & Star Schema
 
 The Gold Layer is structured using dimensional modeling principles (Kimball methodology) to optimize analytical performance:
-- **Fact Table:** Captures transactional metrics and quantitative measurements (e.g., `Fact_Sales`).
-- **Dimension Tables:** Contains context and attributes for filtering and grouping (e.g., `Dim_Customer`, `Dim_Product`, `Dim_Date`).
+- **Fact Table:** Captures transactional metrics and quantitative measurements (e.g., `Fact_Transactions`).
+- **Dimension Tables:** Contains context and attributes for filtering and grouping (e.g., `Dim_Customer`, `Dim_Merchants`, `Dim_Date`).
 
----## 📈 Power BI Dashboard & Advanced Features
+---
+## 📈 Power BI Dashboard & Advanced Features
 
 The Gold Layer serves as the direct engine powering a multi-page, highly interactive **Power BI Dashboard** (4 main analytical views + contextual detail pages). Designed with a modern Dark Theme UI, it ensures intuitive navigation and seamless data exploration.
 
 ### 🖼️ Dashboard Pages Overview
+
 1. **Overview Page:** Executive summary displaying high-level KPIs (`Total Customers`, `Total Merchants`, `Total Transactions`, `Total Sales`), merchant activity trends, and quarterly customer performance.
 2. <img width="1323" height="745" alt="image" src="https://github.com/user-attachments/assets/80351855-8409-4bf4-9859-7298e8de3e4a" />
 
