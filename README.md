@@ -33,27 +33,12 @@ The primary goal of this project is to transform raw, unstructured data from mul
 The solution follows the industry-standard **Medallion Architecture**, ensuring clear separation of concerns, end-to-end data lineage, easy maintenance, and robust data quality validation at every stage.
 
 ---
-
-   [ Raw Data Sources ]
-          │
-          ▼
- ┌───────────────────┐
- │   Bronze Layer    │  ───► (Raw Data Ingestion)
- └─────────┬─────────┘
-           │
-           ▼
- ┌───────────────────┐
- │   Silver Layer    │  ───► (Data Cleaning & Validation)
- └─────────┬─────────┘
-           │
-           ▼
- ┌───────────────────┐
- │    Gold Layer     │  ───► (Star Schema & Business Aggregations)
- └─────────┬─────────┘
-           │
-           ▼
- [ Power BI Dashboard ]
- 
+```mermaid
+graph TD
+    A[Raw Data Sources] --> B[Bronze Layer: Raw Ingestion]
+    B --> C[Silver Layer: Cleansed & Validated]
+    C --> D[Gold Layer: Star Schema & Aggregations]
+    D --> E[Power BI Interactive Dashboard]
 ---
 
 ## 🔄 Medallion Architecture Layers
@@ -119,14 +104,40 @@ The Gold Layer serves as the direct engine powering a multi-page, highly interac
 - **Dynamic Slicers & Cross-Filtering:** Comprehensive slicers for timeframes (`month_name`), categories, and merchant tenure across all report views.
 
 - -------
-🛠️ Tech Stack
-Category                Technology /Tools/UsedData
-WarehouseSQL            Sql Server Managemant System 
-ETL & Data Processing   T-SQL / Stored Procedures 
-Data Modeling           Star Schema Design (Kimball Methodology)
-Business Intelligence   Microsoft Power BI (DAX, Power Query)
-Version Control         Git & GitHub
+### 2️⃣ بديل جدول التقنيات (Tech Stack Table)
+جدول هجين بلغة HTML يضمن عدم انهيار الأعمدة أو تداخل الكلمات مهما كانت لغة الواجهة:
 
+```html
+<table>
+  <thead>
+    <tr>
+      <th align="left">Category</th>
+      <th align="left">Technology / Tools Used</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>Data Warehouse</b></td>
+      <td>SQL Server Management Studio (SSMS)</td>
+    </tr>
+    <tr>
+      <td><b>ETL & Data Processing</b></td>
+      <td>T-SQL / Stored Procedures</td>
+    </tr>
+    <tr>
+      <td><b>Data Modeling</b></td>
+      <td>Star Schema Design (Kimball Methodology)</td>
+    </tr>
+    <tr>
+      <td><b>Business Intelligence</b></td>
+      <td>Microsoft Power BI (DAX, Power Query)</td>
+    </tr>
+    <tr>
+      <td><b>Version Control</b></td>
+      <td>Git & GitHub</td>
+    </tr>
+  </tbody>
+</table>
 
 -----------------------------------------
 🚀 How to Run
